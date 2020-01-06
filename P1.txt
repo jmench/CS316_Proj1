@@ -1,0 +1,57 @@
+Author: Jordan Menchen
+
+References: One reference I did use purely for style sake is
+    (https://stackoverflow.com/questions/9738876/
+    inserting-a-blank-table-row-with-a-smaller-height/9739007) and this
+    was to help me style my table by putting a small space between part
+    1 and part 2. Another reference is (https://www.w3schools.com/css/
+    css_table.asp) and I used this to help me style my table to make it
+    more aesthetically pleasing. One more reference I used is
+    (https://stackoverflow.com/questions/354038/
+    how-do-i-check-if-a-string-is-a-number-float) and I used this to help me
+    validate that a number was submitted into the inamount field.
+
+Collaboration: I spoke with my desk neighbor Kenton about some of the
+    requirements and how he planned on storing the conversions.
+
+URL: https://www.cs.uky.edu/~jkme226/CS316/p1/p1.html
+
+Description: This project has two parts.
+
+    The first part is a conversion calculator that takes the value to convert
+    from, the value to convert to, and the value to convert to as parameters
+    for a function called "convert". This function loops through a pre-set
+    dictionary and searches for the values entered and returns the converted
+    value (if found).
+
+    The second part, much like the first, takes a value to convert from and a
+    value to convert to as parameters. The difference is that these don't have
+    to be direct conversions. They can have an additional step in between where
+    a value must be converted to another before the end value can be reached.
+    This part simply tells the user what value is the common unit, or "NOPATH"
+    if no such value exists.
+
+    Both parts include error checking for misspelled and empty values.
+
+Questions:
+    1. If myin and myout have the same units, my CGI will return the value
+    stored by inamount, because there is no conversion necessary.
+
+    2. An example of a curl command you could run is:
+    curl "https://www.cs.uky.edu/~jkme226/CS316/p1/universal.cgi?myin=euro&
+        myout=usdollar&inamount=1&submit1=Make+it+so&maybein=&maybeout="
+    This produces the HTML output of the CGI, but with the tags included.
+    It gives the correct output for the conversion as well. Basically, I see it
+    as the webpage output but not rendered by anything.
+
+    3. The answer for 100 characters and 1000 characters is the same. The CGI
+    renders a page, but the value can be so large that the user must scroll
+    across the web page to see the result. For 10000 characters, however, an
+    error occurs on the server side. The length of the URL exceeds the capacity
+    limit of the server, to be exact.
+
+    4. If there were 200 new unit conversions added to my program, then the new
+    program would output 200 more than the old program. To test this, I ran the
+    program as I have it now and got 200. I then added one extra conversion and
+    got 201. Thus, I just inferred that adding 199 more would yield 400, which
+    is 200 more than my original answer.

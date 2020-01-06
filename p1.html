@@ -1,0 +1,74 @@
+<!-- Author: Jordan Menchen -->
+<html>
+<head>
+<!-- Setting the style to make the table more presentable -->
+<style>
+
+table {
+    width: 600;
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 3px solid grey;
+    text-align: center;
+}
+
+th {
+    font-size: 22px;
+    background-color: #1D1B1B;
+    color: #EC4D37;
+}
+
+.blank_row
+{
+    height: 30px !important; /* overwrites any other rules */
+    background-color: lightgray;
+}
+
+</style>
+</head>
+<title>Project 1 - CGI</title>
+<h1>Project1 - CGI</h1>
+<h3>Author: Jordan Menchen</h3>
+<body bgcolor = "lightgray">
+    <form action='universal.cgi' method='get'>
+        <table>
+            <tr>
+                <th colspan="4">Part 1 - Convert</th>
+            </tr>
+            <tr>
+                <th>myin</th>
+                <th>myout</th>
+                <th>inamount</th>
+                <th>submit1</th>
+            </tr>
+            <tr>
+                <td><input type='text' name='myin' placeholder="myin"></td>
+                <td><input type='text' name='myout' placeholder="myout"></td>
+                <td><input type='text' name='inamount' placeholder='0'></td>
+                <td><input type='submit' name='submit1' value='Make it so'
+                    style="width: 100%"></td>
+            </tr>
+            <tr class="blank_row">
+                <td colspan="4"></td>
+            </tr>
+            <tr>
+                <th colspan="4">Part 2 - Is Path?</th>
+            </tr>
+            <tr>
+                <th>maybein</th>
+                <th>maybeout</th>
+                <th colspan="2">submit2</th>
+            </tr>
+            <tr>
+                <td><input type='text' name='maybein' placeholder='Input'></td>
+                <td><input type='text' name='maybeout' placeholder='Input'></td>
+                <td colspan="2"><input type='submit' name='submit2'
+                    value='Is path?' style="width: 100%"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
